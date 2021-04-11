@@ -1,0 +1,260 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAREA-Novedades de HTML y CSS3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Novedades HTML5 y CSS3</h1>
+    </div>
+    <br>
+    <div class="topnav">
+        <a href="">¿Qué es HTML5?</a>
+        <a href="">Novedades en HTML</a>
+        <a href="">Estructura de Documentos HTML5</a>
+        <a href="">¿Qué es CSS3?</a>
+        <a href="">Compatibilidad con los navegadores</a>
+        <a href="">Novedades en CSS3</a>
+      </div>
+        <!-- HTML5 -->
+    <div class="container">
+        <h2>¿Qué es HTML5?</h2>
+        <p>
+            HTML5 es la nueva versión de HTML (HyperText Markup Language), lenguaje de programación básico para crear las páginas web.
+            Esta nueva versión tiene importantes novedades respecto a las anteriores (HTML4 y XHTML 1.0) ya que incorpora nuevos elementos para adaptarse a las nuevas necesidades de las webs de hoy en día.
+            HTML5 cambia la forma de construir páginas. Podemos, por supuesto, seguir construyendo las páginas como antes, de manera estática, con texto plano, imágenes, enlaces, etc. En HTML5 se concibe la página ya no como un sitio estático, sino como algo dinámico e interactivo, más parecido a una aplicación para ordenador, (donde el usuario también puede realizar acciones) que a un texto con imágenes.
+        </p>
+    </div>
+    <div class="container">
+        <h2>Novedades en HTML5</h2>
+        <ul>
+            <li>Incorpora nuevas etiquetas de carácter semántico y que nos ayudan a definir la estructura. Por ejemplo <i><b>&#60;footer&#62;</b></i>, para el pie de página.</li>
+            <li>Nuevos controles para formularios que antes sólo eran posibles con JavaScript o CSS.</li>
+            <li>Soporta audio y vídeo de forma nativa.</li>
+            <li>Ya no es necesario el uso de comillas dobles en los atributos, siendo posible algo como: <i><b>&#60;div id=contenedor&#62;</b></i>. Esto es un div <i><b>&#60;div&#62;</b></i>.</li>
+            <li>No hay una sintaxis tan estricta y no es necesario cerrar las etiquetas vacías, por lo que <br> sería válido.</li>
+            <li>Etiqueta doctype simplificada.</li>
+            <li>Las etiquetas de tablas <i><b>thead, tbody y tfoot</b></i> tampoco son obligatorias.</li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>Estructura de Documentos HTML5</h2>
+        Veamos las nuevas etiquetas que nos permiten estructurar nuestro contenido en HTML5 más allá del clásico <i><b>&#60;div&#62;</b></i>:
+        <ul>
+            <li> <b>&#60;header&#62;</b> No confundir con head. Pensada para albergar la información de la parte superior de la página o cabecera. Logos, títulos, descripciones, formularios de búsqueda, etc. Se puede usar tantas veces como se quiera creando de este modo secciones.</li>
+            <p>Por ejemplo:</p>
+            <!-- CODIGOOOO -->
+            <xmp class="codeBlock">
+            <header>
+                <h1>Mi restaurante</h1>
+                <nav>
+                    <ul>
+                        <li><a href="" class="current">Inicio</a></li>
+                        <li><a href="">clases</a></li>
+                        <li><a href="">catering</a></li>
+                        <li><a href="">Sobre mi</a></li>
+                        <li><a href="">Contacto</a></li>
+                    </ul>
+                </nav>
+            </header>
+            </xmp>
+            <li> <b>&#60;footer&#62;</b> Para el pie de página. Esta sección va al final y suele incluir información como los datos de contacto, ayuda, textos legales, etc. También se puede usar varias veces para crear secciones.</li>
+            <p>Por ejemplo:</p>
+            <xmp class="codeBlock">
+                <footer>
+                    2021 Carlos Juca
+                </footer>
+            </xmp>
+
+            <li> <b>&#60;article&#62;</b> Para incluir información que podría tener sentido de forma independiente, como un artículo de blog o noticia. Podemos incluir dentro de ella <i>header</i> y <i>footer</i>.</li>
+            <p>Por ejemplo:</p>
+            <xmp class="codeBlock">
+                <article>
+                    <h2>Título del artículo 1</h2>
+                    <h3>subtítulo del artículo 1</h3>
+                    <p>Contenido del artículo 1. Esto pueden ser muchos párrafos.</p>
+                </article>
+                <article>
+                    <h2>Título del artículo 2</h2>
+                    <h3>subtítulo del artículo 2</h3>
+                    <p>Contenido del artículo 2. Esto pueden ser muchos párrafos.</p>
+                </article>
+            </xmp>
+            <li> <b>&#60;section&#62;</b> Para crear secciones y agrupar artículos por temática</li>
+            <p>Por ejemplo:</p>
+            <xmp class="codeBlock">
+                <section class="recetasjaponesas">
+                    <h2&gt;Recetas japonesas</h2>
+                    <a href="">Pollo Yakitori</a>
+                    <a href="">Pollo Tsukune</a>
+                    <a href="">Okonomiyaki</a>
+                    <a href="">Mizutaki</a>
+                </section>
+                <section class="contacto">
+                    <h2>Contacto</h2>
+                    <p>Mi restaurante<br />
+                    21 Redchurch Street<br />
+                    Shoreditch<br />
+                    London E2 7DP</p>
+                </section>
+            </xmp>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>Elementos Multimedia HTML5</h2>
+        <h4>AUDIO</h4>
+        <p>Usaremos la etiqueta <b><i>&#60;audio&#62;</i></b>, en la cual debemos incluir <b><i>&#60;source&#62;</i></b> para especificar la ubicación y característica de los ficheros mediante los atributos <b>src</b> y <b>type</b>.</p>
+        <p>En la etiqueta audio podemos usar atributos como autoplay, controls, loop o muted.</p>
+        <p>Estos atributos son booleanos, por tanto, no es necesario que especifiquemos valor:</p>
+        <xmp class="codeBlock">
+            <audio controls autoplay>
+                <source src="media/cancion.mp3" type="audio/mpeg">
+            </audio>  
+        </xmp>
+        <h4>VIDEO</h4>
+        <p>Es casi igual que audio, salvo que en <b><i>&#60;video&#62;</i></b> podemos especificar los atributos <i>width</i> y <i>height</i>.</p>
+        <xmp class="codeBlock">
+            <video controls>
+                <source src="media/peli.mp4" type="video/mp4">
+                <source src="media/peli.ogv" type="video/ogv">
+            </video>
+        </xmp>
+        <h3>Formatos de audio y vídeo</h3>
+        <table class="default">
+
+            <tr>
+              <th>Nombre</th>
+              <th>Formato</th>
+              <th>Tipo MIME</th>
+              <th>IE 9+</th>
+              <th>Chrome</th>
+              <th>Firefox 4+</th>
+              <th>Safari 5+</th>
+            </tr>
+          
+            <tr>
+              <td>Audio mp3</td>
+              <td>mp3</td>
+              <td>audio/mpeg</td>
+              <td>x</td>
+              <td>x</td>
+              <td></td>
+              <td>x</td>
+            </tr>
+          
+            <tr>
+              <td>Audio Ogg</td>
+              <td>ogg</td>
+              <td>audio/ogg</td>
+              <td></td>
+              <td>x</td>
+              <td>x</td>
+              <td>x</td>
+            </tr>
+            <tr>
+              <td>Vídeo mp4</td>
+              <td>mp4</td>
+              <td>video/mp4</td>
+              <td>x</td>
+              <td>x</td>
+              <td></td>
+              <td>x</td>
+            </tr>
+            <tr>
+                <td>Vídeo WebM</td>
+                <td>webm</td>
+                <td>video/webm	</td>
+                <td></td>
+                <td>x</td>
+                <td>x</td>
+                <td></td>
+            </tr>
+            <tr>
+               <td>Vídeo Ogg</td>
+                <td>ogv</td>
+                <td>video/ogv</td>
+                <td></td>
+                <td>x</td>
+                <td>x</td>
+                <td></td>
+            </tr>
+          </table>
+
+
+    </div>
+     <!-- HTML5 -->
+     <!-- CSS3 -->
+     <div class="container">
+         <h2>¿Qué es CSS3?</h2>
+         <p>CSS3 es la nueva versión del lenguaje CSS, el cual en realidad es una ampliación de CSS2, en la cual tiene en cuenta algunas de estas nuevas tendencias que son demandadas por los diseñadores. Por tanto CSS3 conserva la misma forma de trabajar (selectores y propiedades) que CSS2; todo lo que hay en CSS2 pasa a CSS3 y además añade más código para poder realizar algunas funciones nuevas.</p>
+         <p>Como se supone que ya debemos conocer CSS2, nos centraremos en este manual en las novedades que trae CSS3, algunas de las cuales nos pueden ser bastante útiles para hacer un diseño más moderno.</p>
+     </div>
+     <div class="container">
+         <h2>Compatibilidad con los navegadores</h2>
+         <p>
+            Desde que salió CSS3 los principales navegadores han ido adaptando sus nuevas versiones a CSS3. Hoy en día (marzo de 2014) todos los navegadores han compatibilizado ya sus nuevas versiones con CSS3, aunque puede que haya algunos aspectos que todavía falten por actualizar en algunos. 
+         </p>
+     </div>
+     <div class="container">
+        <h2>Novedades en CSS3</h2>
+        <p>Las novedades que incorpora CSS3 prentenden que el diseñador tenga un mayor control sobre el diseño, dejando de recurrrir a trucos que normalmente complican el código. Para ello incorpora nuevas propiedades que permiten hacer algunas cosas que no podíamos con CSS2, estas son algunas:</p>
+        <ul>
+            <li>
+                <h3>Esquinas redondeadas</h3>
+                <p>Una de las características más demandadas por los diseñadores es poder crear esquinas redondeadas sin tener que usar trucos o poner imágenes. CSS3 incorpora una nueva propiedad que permite redondear las esquinas de las áreas de la página.</p>
+                <p>Por ejemplo:</p>
+                <img class="border-radius" src="./img/image-html.png" alt="imagen redondeada">
+                <p>Codigo en el archivo <b>.css</b>:</p>
+                <xmp class="codeBlock">
+        .border-radius {
+            border-radius: 50px;
+            }
+                </xmp>
+            </li>
+            <li>
+                <h3>Sombras</h3>
+                <p>La posibilidad de crear sombras en los elementos es otra característica de CSS3. Podemos poner una o varias sombras en un elemento. Además también podemos poner sombra a los textos.</p>
+                <p>Por ejemplo:</p>
+                <img class="image-shadow" src="./img/image-html.png" alt="imagen con sombra">
+                <p>Codigo en el archivo <b>.css</b>:</p>
+                <xmp class="codeBlock">
+        .image-shadow {
+            box-shadow: 5px 5px 5px rgb(0, 0, 0);
+            }                    
+                </xmp>
+            </li>
+            <li>
+                <h3>Transparencias de color</h3>
+                <p>Con CSS3 no sólo podemos poner elementos semitransparentes, sino que también podemos poner la transparencia en el color. Cada color y cada elemento puede adquirir un grado de transparencia que va desde el color sólido al transparente total.</p>
+                <p>Por ejemplo:</p>
+                <img class="image-opacity" src="./img/image-html.png" alt="imagen con transparencia">
+                <p>Codigo en el archivo <b>.css</b>:</p>
+                <xmp class="codeBlock">
+        .image-opacity {
+            opacity: 0.5;
+            }                    
+                </xmp>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>Experiencia usando ramas en GITHUB</h2>
+        <p>
+            Dentro de la experiencia que tuve usando ramas dentro de GITHUB, puedo decir que resulta ser una de las cosas mas útiles, ya que permite resolver problemas que dentro de un ambiente real. 
+            Ya que resulta muy que el proyecto pueda tener diversos estados y que los desarrolladores sean capaces de integrar estos cambios de una manera agil.
+        </p>
+        <p>
+            Esta forma de trabajar mediante ramas facilita mucho el trabajo en equipo, ya que cada desarrollador puede realizar una tarea independiente de lo que los demás esten trabajando, para luego integrar los cambios
+            ya sea para resolver problemas o crear nuevas funcionalidades.
+        </p>
+    </div>
+</body>
+<!-- <footer>
+    <small>Carlos Homero Juca Viteri | Ingenieria Web</small><br>
+    <small><a href="https://github.com/chjuca">@chjuca</a></small><br>
+    <small>2021</small>
+</footer> -->
+</html>
